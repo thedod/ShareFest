@@ -15,6 +15,7 @@
 <script type="text/javascript" src="/client.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/files.js"></script>
+<script type="text/javascript" src="js/jquery.socialshareprivacy.min.js"></script>
 <script>
     if (location.host == 'www.sharefest.me') { // don't start analytics if in wrong domain
         (function (i, s, o, g, r, a, m) {
@@ -266,6 +267,10 @@ function onTextBoxClick(e) {
         <div id='notificationDiv' class="alert-error" style="display: none;cursor:default" onclick="stopPropogation(event)">
             <!--<a class="close" onclick="$('.alert').hide()">×</a>-->
         </div>
+        <!-- Social Share Privacy -->
+        <div style="margin:0 64px; position:relative; top:32px" onclick="stopPropogation(event)">
+          <div id="socialshareprivacy" style="display:none"></div>
+        </div>
         <!--<canvas id="cnvs" style="height: 0px"></canvas>-->
         <div class="textDrag">
             <img alt="logo" id="logo" src="img/logo.png"/>
@@ -289,13 +294,6 @@ function onTextBoxClick(e) {
 
             <!--<span id="hs_cos_wrapper_social_sharing13591521802993" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_social_sharing" style="" data-hs-cos-general-type="widget" data-hs-cos-type="social_sharing"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Foffers.hubspot.com%2Fthe-science-of-twitter-free-chapter-download%3Futm_medium%3Dsocial%26utm_source%3Dfacebook" target="_blank" style="width:24px;border-width:0px;border:0px;"><img src="https://static.hubspot.com/final/img/common/icons/social/facebook-24x24.png" class="hs-image-widget " style="height:24px;width:24px;border-width:0px;border:0px;" width="24" height="24" hspace="0" alt="Share on Facebook"></a>&nbsp;<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Foffers.hubspot.com%2Fthe-science-of-twitter-free-chapter-download%3Futm_medium%3Dsocial%26utm_source%3Dlinkedin" target="_blank" style="width:24px;border-width:0px;border:0px;"><img src="https://static.hubspot.com/final/img/common/icons/social/linkedin-24x24.png" class="hs-image-widget " style="height:24px;width:24px;border-width:0px;border:0px;" width="24" height="24" hspace="0" alt="Share on LinkedIn"></a>&nbsp;<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Foffers.hubspot.com%2Fthe-science-of-twitter-free-chapter-download%3Futm_medium%3Dsocial%26utm_source%3Dtwitter&amp;url=http%3A%2F%2Foffers.hubspot.com%2Fthe-science-of-twitter-free-chapter-download%3Futm_medium%3Dsocial%26utm_source%3Dtwitter&amp;source=tweetbutton" target="_blank" style="width:24px;border-width:0px;border:0px;"><img src="https://static.hubspot.com/final/img/common/icons/social/twitter-24x24.png" class="hs-image-widget " style="height:24px;width:24px;border-width:0px;border:0px;" width="24" height="24" hspace="0" alt="Share on Twitter"></a>&nbsp;<a href="https://plus.google.com/share?url=http%3A%2F%2Foffers.hubspot.com%2Fthe-science-of-twitter-free-chapter-download%3Futm_medium%3Dsocial%26utm_source%3Dgoogle_plus" target="_blank" style="width:24px;border-width:0px;border:0px;"><img src="https://static.hubspot.com/final/img/common/icons/social/googleplus-24x24.png" class="hs-image-widget " style="height:24px;width:24px;border-width:0px;border:0px;" width="24" height="24" hspace="0" alt="Share on Google+"></a>&nbsp;<a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Foffers.hubspot.com%2Fthe-science-of-twitter-free-chapter-download%3Futm_medium%3Dsocial%26utm_source%3Dpinterest&amp;media=http%3A%2F%2Fcdn1.hubspot.com%2Fhub%2F53%2Fthe-science-of-twitter.png" target="_blank" style="width:24px;border-width:0px;border:0px;"><img src="https://static.hubspot.com/final/img/common/icons/social/pinterest-24x24.png" class="hs-image-widget " style="height:24px;width:24px;border-width:0px;border:0px;" width="24" height="24" hspace="0" alt="Share on Pinterest"></a>&nbsp;<a href="mailto:?subject=Check out http%3A%2F%2Foffers.hubspot.com%2Fthe-science-of-twitter-free-chapter-download%3Futm_medium%3Dsocial%26utm_source%3Demail &amp;body=Check out http%3A%2F%2Foffers.hubspot.com%2Fthe-science-of-twitter-free-chapter-download%3Futm_medium%3Dsocial%26utm_source%3Demail" target="_blank" style="width:24px;border-width:0px;border:0px;"><img src="https://static.hubspot.com/final/img/common/icons/social/email-24x24.png" class="hs-image-widget " style="height:24px;width:24px;border-width:0px;border:0px;" width="24" height="24" hspace="0" alt="Share on Email"></a></span>-->
 
-            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" id="addthis" style="display:none">
-                <a class="addthis_button_email"></a>
-                <a class="addthis_button_facebook"></a>
-                <a class="addthis_button_twitter"></a>
-                <a class="addthis_button_google_plusone_share"></a>
-                <a class="addthis_button_sinaweibo"></a>
-            </div>
             </div>
 
             <div id="box-info">
@@ -388,11 +386,11 @@ function onTextBoxClick(e) {
 </div>
 
 <input onchange="addFiles(this.files)" type="file" id="files" name="files[]" multiple>
-
+ 
 <!--<div id="tt" style="position: absolute; left: 50px; bottom: 50px; font-size: 5em;">0</div>-->
 <!-- /container -->
 <!-- AddThis Button BEGIN -->
-<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+<!-- <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script> -->
 <!-- AddThis Button END -->
 <!--<style type='text/css'>@import url('https://getbarometer.s3.amazonaws.com/assets/barometer/css/barometer.css');</style>-->
 <!--<script src='https://getbarometer.s3.amazonaws.com/assets/barometer/javascripts/barometer.js'-->
@@ -403,10 +401,12 @@ function onTextBoxClick(e) {
 
 <!-- crazyegg -->
 <script type="text/javascript">
+  if (location.host == 'www.sharefest.me') { // don't do crazy/eggy stuff if in wrong domain
     setTimeout(function(){var a=document.createElement("script");
         var b=document.getElementsByTagName("script")[0];
         a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/2087.js?"+Math.floor(new Date().getTime()/3600000);
         a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+  }
 </script>
 <!-- crazyegg -->
 

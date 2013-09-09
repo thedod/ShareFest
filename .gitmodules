@@ -1,0 +1,3 @@
+[submodule "socialshareprivacy"]
+	path = socialshareprivacy
+	url = https://github.com/patrickheck/socialshareprivacy

@@ -30,9 +30,10 @@ TODO:
 
 Quick setup after cloning
 ==============
-install nodejs
-cd into sharefest root directory and do "npm install"
-run node server.js
+* install nodejs
+* run `git submodule update --init` to clone the _social share privacy_ submodule
+* cd into sharefest root directory and do "npm install"
+* run `node server.js`
 
 About
 ==============
