@@ -12,7 +12,7 @@
     },
     "devDependencies": {},
     "scripts": {
-        "start": "node sharefest/server.js"
+        "start": "cd sharefest; node server.js"
     },
     "engines": {
         "node": "0.6.x"
