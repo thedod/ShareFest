@@ -12,10 +12,20 @@
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
 <link href="css/main_new.css" rel="stylesheet">
+<!-- begin SocialSharePrivacy -->
+<script type="text/javascript" src="SocialSharePrivacy/javascripts/jquery.socialshareprivacy.min.js"></script>
+<script type="text/javascript">
+// define button order and other defaults:
+$.fn.socialSharePrivacy.settings.order = ['mail', 'fbshare']; // "1-click" options first, the rest - alphabetically
+$.fn.socialSharePrivacy.settings.perma_option = false;
+$.fn.socialSharePrivacy.settings.info_link_target = '_blank';
+$.fn.socialSharePrivacy.settings.layout = 'box';
+</script>
+<!-- end SocialSharePrivacy -->
+
 <script type="text/javascript" src="/client.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/files.js"></script>
-<script type="text/javascript" src="js/jquery.socialshareprivacy.min.js"></script>
 <script>
     if (location.host == 'www.sharefest.me') { // don't start analytics if in wrong domain
         (function (i, s, o, g, r, a, m) {
@@ -261,6 +271,10 @@ function onTextBoxClick(e) {
     </div>
 </div>
 
+<!-- begin SocialSharePrivacy -->
+<div id="SocialSharePrivacy" style="display:none; position: fixed; left:740px; top:90px; z-index:666"></div>
+<!-- end SocialSharePrivacy -->
+
 <div class="container">
     <div class="dragdrop text-pretty" id="dropbox" onclick="$('#files').click()">
 
@@ -269,7 +283,6 @@ function onTextBoxClick(e) {
         </div>
         <!-- Social Share Privacy -->
         <div style="margin:0 64px; position:relative; top:32px" onclick="stopPropogation(event)">
-          <div id="socialshareprivacy" style="display:none"></div>
         </div>
         <!--<canvas id="cnvs" style="height: 0px"></canvas>-->
         <div class="textDrag">

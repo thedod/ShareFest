@@ -28,13 +28,12 @@ TODO:
 
 Quick setup
 ==============
-1. Install [nodejs](http://nodejs.org/)
-1. [Download](https://github.com/Peer5/ShareFest/archive/master.zip) this repo and unzip it, or `git clone https://github.com/Peer5/ShareFest.git`
-1. `cd ShareFest`
-1. Get the [SocialSharePrivacy](https://github.com/patrickheck/socialshareprivacy/#readme) add-on: either [download](https://github.com/patrickheck/socialshareprivacy/archive/master.zip) and unzip it inside `ShareFest/`, or `git submodule update --init`
-1. `npm install --dedupe` to install dependencies.
-1. `npm start` to start the server
-1. http://localhost:13337 should work
+1. Install nodejs
+2. [Download](https://github.com/Peer5/ShareFest/archive/master.zip) this repo, or `git clone https://github.com/Peer5/ShareFest.git`
+3. `cd ShareFest`
+4. `npm install --dedupe` to install dependencies.
+5. `npm start` to start the server
+6. http://localhost:13337 should work
 
 Environment Variables
 ==============
