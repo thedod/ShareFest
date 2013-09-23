@@ -32,6 +32,7 @@ function showLink() {
 }
 
 function updateShareButtons() {
+    $('title').text('ShareFest: '+$('#box-text').text());
     $('#SocialSharePrivacy').socialSharePrivacy().show();  
 }
 
